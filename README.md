@@ -1,0 +1,1 @@
+Practice automation with cypress
