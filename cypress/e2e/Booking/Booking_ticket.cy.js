@@ -128,5 +128,15 @@ describe('Booking Tiket', () => {
     cy.get('.w-100').click()
     cy.get('.list-group > :nth-child(1)').click()
     cy.get('.modal-body > form > .w-100').click()
-   })
+   }) 
+   it ('Booking tiket one way dengan keberangkatan dan tujuan yang sama', () => {
+    cy.get('#from').select('London')
+    cy.get('#to').select('London')
+    cy.get('#departureDate').type('2025-11-25')
+    cy.get('#passengers').clear()
+    cy.get('#passengers').type('2')
+    cy.get('#travelClass').select('Economy')
+    cy.get('#oneWay').click()
+    cy.get('.w-100').click()
+   }) 
 });
