@@ -7,12 +7,12 @@ describe('Booking Tiket', () => {
    it('Booking tiket', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-11-25')
+    cy.get('#departureDate').type('2025-11-27')
     cy.get('#returnDate').type('2025-11-30')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
-    cy.get('.w-100').click()
+    cy.get('.btn-primary').click()
     cy.get('.list-group > :nth-child(2)').click()
     cy.get('.list-group > :nth-child(3)').click()
     cy.get('[name="cardNumber"]').type('518257012740')
@@ -74,14 +74,13 @@ describe('Booking Tiket', () => {
    it ('Booking tiket one way', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-11-25')
-    cy.get('#returnDate').type('2025-11-30')
+    cy.get('#departureDate').type('2025-11-28')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
     cy.get('#oneWay').click()
     cy.get('.w-100').click()
-    cy.get('.list-group > :nth-child(1)').click()
+    cy.get('.list-group-item-action:nth-child(1)').click()
     cy.get('[name="cardNumber"]').type('518257012740')
     cy.get('[name="expiryDate"]').type('10-30')
     cy.get('[name="cvv"]').type('159124')
@@ -90,7 +89,7 @@ describe('Booking Tiket', () => {
    it ('User tidak mengisi cardnumber', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-11-25')
+    cy.get('#departureDate').type('2025-11-26')
     cy.get('#returnDate').type('2025-11-30')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
@@ -105,7 +104,7 @@ describe('Booking Tiket', () => {
    it ('User tidak mengisi expirydate', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-11-25')
+    cy.get('#departureDate').type('2025-11-26')
     cy.get('#returnDate').type('2025-11-30')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
@@ -119,7 +118,7 @@ describe('Booking Tiket', () => {
    it ('User tidak mengisi form cvv', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-11-25')
+    cy.get('#departureDate').type('2025-11-26')
     cy.get('#returnDate').type('2025-11-30')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
@@ -132,11 +131,12 @@ describe('Booking Tiket', () => {
    it ('Booking tiket one way dengan keberangkatan dan tujuan yang sama', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('London')
-    cy.get('#departureDate').type('2025-11-25')
+    cy.get('#departureDate').type('2025-11-26')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
     cy.get('#oneWay').click()
     cy.get('.w-100').click()
    }) 
+   
 });

@@ -12,6 +12,7 @@
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.41.2",
     "allure-cypress": "^3.4.2",
-    "cypress": "^15.7.0"
+    "cypress": "^15.7.0",
+    "cypress-xpath": "^2.0.1"
   }
 }
