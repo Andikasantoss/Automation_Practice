@@ -138,5 +138,5 @@ describe('Booking Tiket', () => {
     cy.get('#oneWay').click()
     cy.get('.w-100').click()
    }) 
-   
+
 });
