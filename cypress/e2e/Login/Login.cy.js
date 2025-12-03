@@ -1,12 +1,12 @@
-describe('Login', () => {
-  beforeEach('should visit page', () => {
-    cy.visit('https://testerbud.com/practice-login-form');
+describe('Login', () => { 
+  beforeEach('should visit page', () => { 
+    cy.visit('https://testerbud.com/practice-login-form'); 
     cy.scrollTo(0, 1270)
 
   });
-  it('Login with valid data',() => {
+  it('Login with valid data',() => { 
 
-    cy.get('#formBasicEmail').type('user@premiumbank.com')
+    cy.get('#formBasicEmail').type('user@premiumbank.com') 
     cy.get('#formBasicPassword').type('Bank@123')
     cy.get('form > .btn-lg').click()
     cy.scrollTo(0, 1270)

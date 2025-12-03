@@ -1,4 +1,4 @@
-describe('Checkout', () => {
+describe('Checkout item', () => {
 
   beforeEach(() => {
     cy.visit('https://testerbud.com/practice-ecommerece-website');
@@ -21,7 +21,7 @@ describe('Checkout', () => {
   })
 
   it('Checkout item more then 1 item', () => {
-    cy.get('#quantity-1').type('0')
+    cy.get('#quantity-1').type('0') 
     cy.get(':nth-child(1) > .h-100 > .flex-column > .mt-auto > .btn').click()
     cy.get('.position-relative').click()
   })
