@@ -29,5 +29,11 @@ describe('Login', () => {
     cy.get('form > .btn-lg').click()
     cy.scrollTo(0, 1270)
   })
+  it('Login with account not registered', () => {
 
+    cy.get('#formBasicEmail').type('user1234@premiumbank.com') 
+    cy.get('#formBasicPassword').type('Bank@12345678')
+    cy.get('form > .btn-lg').click()
+    cy.scrollTo(0, 1270)
+  })
 });
