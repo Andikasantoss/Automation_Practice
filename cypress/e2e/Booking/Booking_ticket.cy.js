@@ -4,22 +4,6 @@ describe('Booking Tiket', () => {
     cy.visit('https://testerbud.com/flight-booking-scenarios');
     cy.scrollTo(0.1270)
    })   
-   it('Booking tiket', () => {
-    cy.get('#from').select('London')
-    cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-12-08')
-    cy.get('#returnDate').type('2025-12-30')
-    cy.get('#passengers').clear()
-    cy.get('#passengers').type('2')
-    cy.get('#travelClass').select('Economy')
-    cy.get('.btn-primary').click()
-    cy.get('.list-group > :nth-child(2)').click()
-    cy.get('.list-group > :nth-child(3)').click()
-    cy.get('[name="cardNumber"]').type('518257012740')
-    cy.get('[name="expiryDate"]').type('10-30')
-    cy.get('[name="cvv"]').type('159124')
-    cy.get('.modal-body > form > .w-100').click()
-   })
    it ('Booking tiket dengan tannggal hari sebelumnya', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')

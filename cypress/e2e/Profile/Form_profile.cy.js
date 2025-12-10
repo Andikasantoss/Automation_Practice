@@ -1,4 +1,4 @@
-describe('Register', () => {
+describe('Form Profile', () => {
 
   beforeEach(() => {
     cy.visit('https://testerbud.com/practice-forms');
