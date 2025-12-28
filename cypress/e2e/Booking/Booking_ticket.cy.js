@@ -7,8 +7,8 @@ describe('Booking Tiket', () => {
    it ('Booking tiket dengan tannggal hari sebelumnya', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-12-23')
-    cy.get('#returnDate').type('2025-12-30')
+    cy.get('#departureDate').type('2025-12-30')
+    cy.get('#returnDate').type('2026-01-02')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
@@ -58,7 +58,7 @@ describe('Booking Tiket', () => {
    it ('Booking tiket one way', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-12-28')
+    cy.get('#departureDate').type('2025-12-30')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
@@ -73,8 +73,8 @@ describe('Booking Tiket', () => {
    it ('User tidak mengisi cardnumber', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-12-26')
-    cy.get('#returnDate').type('2025-12-30')
+    cy.get('#departureDate').type('2025-12-30')
+    cy.get('#returnDate').type('2026-01-02')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
@@ -88,8 +88,8 @@ describe('Booking Tiket', () => {
    it ('User tidak mengisi expirydate', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-12-26')
-    cy.get('#returnDate').type('2025-12-30')
+    cy.get('#departureDate').type('2025-12-30')
+    cy.get('#returnDate').type('2026-01-02')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
@@ -102,8 +102,8 @@ describe('Booking Tiket', () => {
    it ('User tidak mengisi form cvv', () => {
     cy.get('#from').select('London')
     cy.get('#to').select('Tokyo')
-    cy.get('#departureDate').type('2025-12-26')
-    cy.get('#returnDate').type('2025-12-30')
+    cy.get('#departureDate').type('2025-12-30')
+    cy.get('#returnDate').type('2026-01-02')
     cy.get('#passengers').clear()
     cy.get('#passengers').type('2')
     cy.get('#travelClass').select('Economy')
